@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculadora Omni</string>
+    <string name="standard_mode">Padrão</string>
+    <string name="scientific_mode">Científica</string>
+    <string name="converter_mode">Conversor</string>
+    <string name="history_title">Histórico de Cálculos</string>
+    <string name="clear_history">Limpar Histórico</string>
+    <string name="no_history">Nenhum cálculo registrado ainda</string>
+    <string name="copied_to_clipboard">Copiado para a área de transferência</string>
+</resources>
+

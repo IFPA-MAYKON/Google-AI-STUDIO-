@@ -1,0 +1,7 @@
+{
+  "name": "Calculadora Omni",
+  "description": "Calculadora padrão e científica completa e offline com histórico, conversor de unidades e funções avançadas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
