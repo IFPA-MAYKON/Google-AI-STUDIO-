@@ -1,0 +1,33 @@
+name: Publicar site imobiliario no GitHub Pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projeto-imobiliario-para-2026/**'
+      - '.github/workflows/publicar-site-imobiliario.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages-imobiliario
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter arquivos do repositorio
+        uses: actions/checkout@v4
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Publicar conteudo estatico
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
